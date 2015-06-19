@@ -11,6 +11,10 @@ public:
 	friend class ListaEnlazada<T>;
 };
 
+Nodo::Nodo(){
+	siguiente = NULL;
+}
+
 template <class T>
 class ListaEnlazada
 
