@@ -1,26 +1,24 @@
-#include <iostream>
-
-template <class T>
 class Nodo {
 private:
-	Nodo<T>* siguiente;
+	Nodo* siguiente;
 	T dato;
 
 public:
 	Nodo();
-	friend class ListaEnlazada<T>;
 };
 
 Nodo::Nodo(){
-	siguiente = NULL;
+	siguiente = nullptr;
 }
 
-template <class T>
-class ListaEnlazada
+class ListaEnlazada{
+private:
+	Nodo* cabecera;
 
+public:
+	ListaEnlazada();
+};
 
-int main(int argc, char* argv[]){
-
-
-	return 0;
+ListaEnlazada::ListaEnlazada(){
+	cabecera = null;
 }
