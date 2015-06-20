@@ -1,4 +1,4 @@
-# EstructurasDeDatos
+# Estructuras de Datos
 Este repositorio fue creado para mostrar ejemplos de implementaciones de estructuras de datos en C++ y así, poder  ilustrar a medida que vaya publicando sobre ellas en [mi blog](http://albertocg.com).
 
 ###Lista de entradas en el blog.
