@@ -1,3 +1,9 @@
+#include <iostream>
+#pragma once
+
+template <class T>
+class ListaEnlazada;
+
 template<class T>
 class Nodo {
 private:
@@ -5,8 +11,11 @@ private:
 	T dato;
 
 public:
-	Nodo();
-	friend class ListaEnlazada;
+	Nodo(){	
+		siguiente = NULL;
+	}
+
+	friend class ListaEnlazada<T>;
 };
 
 
@@ -16,5 +25,25 @@ private:
 	Nodo<T>* cabecera;
 
 public:
-	ListaEnlazada();
+	ListaEnlazada(){
+		cabecera = NULL;
+	}
+
+	void anadirInicio(T dato){
+		Nodo<T>* aux;
+		aux = new Nodo<T>();
+		aux->dato = dato;
+		aux->siguiente = this->cabecera;
+		cabecera = aux;
+	}
+
+	void imprimirInicio(){
+		Nodo<T>* aux;
+		aux = cabecera;
+		while(aux != NULL){
+			std::cout << "El dato en: " << aux << " es: " << aux->dato << std::endl;
+			aux = aux->siguiente;
+		};
+	}
 };
+
